@@ -1,0 +1,40 @@
+Command Line:
+npm i eslint-plugin-prettier
+npm i eslint prettier-eslint eslint-config-prettier --save-dev
+npm install --save @types/react		(used for react)
+rmdir -r 
+
+
+.eslint file:
+
+{
+    "extends": ["prettier"],
+    "plugins": ["prettier"],
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType":"module",
+        "ecmaFeatures": {
+            "jsx": true,
+        },
+    },
+    "rules": {
+        "semi": 0,
+        "react/prop-types": 0,
+        "react/destructuring-assignment": 0,
+        "react/no-array-index-key": 0,
+        "no-shadow": 0,
+        "prettier/prettier": [
+            "error",
+            {
+                "tabWidth": 4,
+                "semi": false,
+                "singleQuote": true,
+                "trailingComma": "none",
+                "arrowParens": "avoid",
+                "printWidth": 100,
+                "bracketSpacing": true,
+                "jsxBracketSameLine": false
+            }
+        ]
+    }
+}
